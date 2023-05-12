@@ -1,0 +1,14 @@
+.ht-banner {
+    color: black;
+    text-align: center;
+    padding: 32px;
+    border-bottom: solid 3px black;
+}
+
+.logo {
+    float: left;
+    padding: 8px;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
