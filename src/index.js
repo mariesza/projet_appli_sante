@@ -7,14 +7,19 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Signup from "./components/Signup";
 import ErrorPage from "./components/ErrorPage";
-
-import Banner from './components/Banner.js'
+import Utilisateur from "./components/Compte";
+import Banner from './components/Banner.js';
+import Master from '.components/Master.js'
 
 const router = createBrowserRouter([
 {
   path: "/",
   element: <Banner />,
   errorElement: <ErrorPage />,
+},
+{ 
+  path: "/profile/:id",
+  element: <Utilisateur />,
 },
 {
   path: "/creation-de-compte",

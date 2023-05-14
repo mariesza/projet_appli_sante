@@ -7,7 +7,7 @@ import User from "../modele/User";
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://fruits.shrp.dev",
+  baseURL: "https://fake-health-data-api.shrp.dev/",
   timeout: 3000,
   headers: {},
 });
