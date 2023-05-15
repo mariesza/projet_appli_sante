@@ -2,13 +2,13 @@
 function PhysioPreview({dataphysio}) {
 
     function onClick(){
-        console.log(dataphysio.name);
+        console.log(dataphysio.date);
     }
 
     return (
-        <div className={"Données physiologiques" + dataphysio.name.toLowerCase()}>
+        <div className={"Données physiologiques" + dataphysio.date.toLowerCase()}>
         
-        <img width="100px" alt={dataphysio.name} />
+        <img width="100px" alt={dataphysio.date} />
         <button onClick={() => onClick}>
             Données physiologiques 
         </button>

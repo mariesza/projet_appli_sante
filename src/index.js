@@ -6,15 +6,21 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Signup from "./components/Signup";
+import Signin from './components/Signin';
 import ErrorPage from "./components/ErrorPage";
 import Utilisateur from "./components/Compte";
 import Banner from './components/Banner.js';
-import Master from '.components/Master.js'
+import Master from './components/Master.js'
 
 const router = createBrowserRouter([
 {
   path: "/",
   element: <Banner />,
+  errorElement: <ErrorPage />,
+},
+{
+  path: "/test",
+  element: <Master />,
   errorElement: <ErrorPage />,
 },
 { 
@@ -26,6 +32,10 @@ const router = createBrowserRouter([
   element: <Signup />,
   errorElement: <ErrorPage />,
 },
+{ path : '/connection',
+  element: <Signin />,
+  errorElement: <ErrorPage />,
+}
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
