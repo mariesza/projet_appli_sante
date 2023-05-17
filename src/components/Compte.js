@@ -18,3 +18,9 @@
 //       />
 //     );
 //   }
+
+function Compte(){
+    console.log('Hey !!!! ')
+}
+
+export default Compte;
