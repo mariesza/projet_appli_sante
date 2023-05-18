@@ -29,11 +29,11 @@ const handleResponseChange = (event) => {
     const title = 'Health Tracker'
     return (
         <div className='ht-banner'>
-            <Link to="/creation-de-compte">
+            <Link to="/auth/signup">
             <button onClick={()=>onClick()}>S'inscrire</button>
             </Link>
 
-            <Link to="/connection">
+            <Link to="/auth/signin">
             <button onClick={()=>onClick()}>Se connecter</button>
             </Link>
 

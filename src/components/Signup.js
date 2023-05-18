@@ -86,6 +86,8 @@ function Signup() {
         {errors.password && <span>Ce champ est obligatoire</span>}
 
         <button type="submit">Création de compte</button>
+        <br /> 
+        <a href="/">Retour</a>
       </form>
     </div>
   );

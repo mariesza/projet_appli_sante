@@ -8,9 +8,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Signup from "./components/Signup";
 import Signin from './components/Signin';
 import ErrorPage from "./components/ErrorPage";
-import Utilisateur from "./components/Compte";
 import Banner from './components/Banner.js';
 import Master from './components/Master.js'
+import MyComponent from './components/test.js'
 
 const router = createBrowserRouter([
 {
@@ -20,19 +20,16 @@ const router = createBrowserRouter([
 },
 {
   path: "/test",
-  element: <Master />,
+  element: <MyComponent/>,
   errorElement: <ErrorPage />,
 },
-{ 
-  path: "/profile/:id",
-  element: <Utilisateur />,
-},
+
 {
-  path: "/creation-de-compte",
+  path: "/auth/signup",
   element: <Signup />,
   errorElement: <ErrorPage />,
 },
-{ path : '/connection',
+{ path : '/auth/signin',
   element: <Signin />,
   errorElement: <ErrorPage />,
 }
