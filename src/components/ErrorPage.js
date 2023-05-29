@@ -6,8 +6,8 @@ export default function ErrorPage() {
 
   return (
     <div id="error-page">
-      <h1>Mince alors, cette page n'existe pas ! 🤔</h1>
-      <p>Désolé, une erreur s'est produite. 😦</p>
+      <h1>Cette page n'existe pas !</h1>
+      <p>Désolé, une erreur s'est produite.</p>
       <p>
         <i>{error.statusText || error.message}</i>
       </p>

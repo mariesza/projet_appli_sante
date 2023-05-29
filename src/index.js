@@ -23,7 +23,11 @@ const router = createBrowserRouter([
   element: <MyComponent/>,
   errorElement: <ErrorPage />,
 },
-
+{
+path: "/auth/login",
+element: <Master />,
+errorElement: <ErrorPage />,
+},
 {
   path: "/auth/signup",
   element: <Signup />,

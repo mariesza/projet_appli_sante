@@ -1,24 +1,28 @@
+//importation des bibliothèques
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import "./Signin.js";
-
-import User from "../modele/User";
-
 import axios from "axios";
 
+//importation des fichiers
+import "./Signup.css";
+import User from "../models/User";
+
+
 const axiosInstance = axios.create({
-  baseURL: "https://fake-health-data-api.shrp.dev/",
+  baseURL: "https://fake-health-data-api.shrp.dev",
   timeout: 3000,
   headers: {},
 });
 
 function Signup() {
+
   const {
     reset,
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [user, setUser] = useState(null);
@@ -33,7 +37,7 @@ function Signup() {
 
     try {
       setLoading(true);
-      const response = await axiosInstance.post(`/users`, aUser);
+      const response = await axiosInstance.post(`/https://fake-health-data-api.shrp.dev/auth/signin`, aUser);
 
       if (response.status === 204) {
         setUser(aUser);
@@ -86,8 +90,10 @@ function Signup() {
         {errors.password && <span>Ce champ est obligatoire</span>}
 
         <button type="submit">Création de compte</button>
+        
         <br /> 
-        <a href="/">Retour</a>
+        <a href="/"> Retour </a>
+      
       </form>
     </div>
   );
